@@ -13,14 +13,13 @@ public class TouchController : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            
+            debug.text = Input.GetTouch(0).deltaPosition.x.ToString();
+
             var posTouch = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
 
-            Collider2D hit = Physics2D.OverlapPoint(new Vector2(posTouch.x, posTouch.y));
-
-            if(hit != null)
-            {
-                if(Input.GetTouch(0).deltaPosition.x > 10)
+          
+                
+                if (Input.GetTouch(0).deltaPosition.x > 10)
                 {
                     listCards[index].GetComponent<CardDisplay>().GotoRight();
                  
@@ -32,7 +31,7 @@ public class TouchController : MonoBehaviour
                 }
 
 
-            }
+            
         }
 
         if(listCards[index].GetComponent<CardDisplay>().active == false)

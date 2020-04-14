@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Card
     - CardDisplay
+    - GameManager
     - TouchController
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
@@ -12,6 +13,12 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -22,6 +29,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/aaa.unity:
@@ -37,30 +45,38 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 61
+    - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11150}
+      Script: {instanceID: 11168}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11360}
+      Script: {instanceID: 11378}
     - Class: 114
-      Script: {instanceID: 11452}
+      Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11776}
+      Script: {instanceID: 11794}
     - Class: 114
-      Script: {instanceID: 12692}
+      Script: {instanceID: 12028}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12710}
     - Class: 114
-      Script: {instanceID: 13076}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 13054}
+    - Class: 114
+      Script: {instanceID: 13096}
+    - Class: 114
+      Script: {instanceID: 13128}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -170,7 +186,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 3253f96cc75cf60052755bc47351f39a
+      Hash: 568455d532e2efada6001bf4f880852e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Card
@@ -288,6 +304,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 442405e1cc99f1dc35ee7b4aecd72640
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TouchController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -410,7 +432,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 7d7e9f99bb5dcfa83cde501912dab44a
+      Hash: 7a4170262473db9811431316c439afaf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CardDisplay
@@ -444,6 +466,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: f71512ea93dc40326e554ed13e42a4d5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
@@ -510,13 +538,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 1ceac18873e00e425c6df761b730434f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TouchController
   platform: 13
   scenePathNames:
   - Assets/aaa.unity
-  playerPath: C:/Users/180547/Desktop/test.apk
+  playerPath: C:/Users/ga_co/Desktop/Jogos/MobileGameSerius/GovernantMobile/TestMobileMecanica/scene1.apk
