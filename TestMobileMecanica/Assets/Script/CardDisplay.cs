@@ -20,42 +20,48 @@ public class CardDisplay : MonoBehaviour
         descricaoText.text = card.descricao;
         anim = GetComponent<Animator>();
         controller = GameObject.FindGameObjectWithTag("Controller").GetComponent<TouchController>();
-
-        nomeText.enabled = false;
-        descricaoText.enabled = false;
-
      
     }
 
 
 
-
+    bool active = false;
 
     public void GotoRight()
     {
-        GameManager.Instance.AlterarPontos(card.populacaoA, card.naturezaA, card.economiaA);
-
-        anim.SetFloat("dirToGo", 1);
+        if (!active)
+        {
+            active = true;
+            GameManager.Instance.AlterarPontos(card.populacaoA, card.naturezaA, card.economiaA);
+            GameManager.Instance.AddCards();
+           anim.SetFloat("dirToGo", 1);
+        }
     }
 
     public void GotoLeft()
     {
-        GameManager.Instance.AlterarPontos(card.populacaoN, card.naturezaN, card.economiaN);
+        if (!active)
+        {
+            active = true;
+     
+             GameManager.Instance.AlterarPontos(card.populacaoN, card.naturezaN, card.economiaN);
+            GameManager.Instance.AddCards();
 
-        anim.SetFloat("dirToGo", -1);
+            anim.SetFloat("dirToGo", -1);
+        }
+
     }
 
 
     public void Die()
     {
-        controller.index++;
+        controller.Next();
         Destroy(gameObject);
     }
-   public bool active = false;
+
 
     public void ActiveCard()
     {
-        active = true;
         nomeText.enabled = true;
         descricaoText.enabled = true;
     }
